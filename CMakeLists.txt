@@ -5,6 +5,8 @@ set(KF_DEP_VERSION "6.28.0") # handled by release scripts
 
 project(qqc2-desktop-style VERSION ${KF_VERSION})
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 set(REQUIRED_QT_VERSION 6.9.0)
 
 find_package(ECM 6.28.0 REQUIRED NO_MODULE)
