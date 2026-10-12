@@ -1,13 +1,11 @@
-cmake_minimum_required(VERSION 3.29)
+cmake_minimum_required(VERSION 3.30)
 
-set(KF_VERSION "6.30.0") # handled by release scripts
+set(KF_VERSION "6.31.0") # handled by release scripts
 set(KF_DEP_VERSION "6.30.0") # handled by release scripts
 
 project(qqc2-desktop-style VERSION ${KF_VERSION})
 
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-
-set(REQUIRED_QT_VERSION 6.9.0)
+set(REQUIRED_QT_VERSION 6.10.0)
 
 find_package(ECM 6.30.0 REQUIRED NO_MODULE)
 
@@ -123,6 +121,7 @@ ecm_target_qml_sources(org_kde_desktop
         org.kde.desktop/Dial.qml
         org.kde.desktop/Dialog.qml
         org.kde.desktop/DialogButtonBox.qml
+        org.kde.desktop/DoubleSpinBox.qml
         org.kde.desktop/Drawer.qml
         org.kde.desktop/Frame.qml
         org.kde.desktop/GroupBox.qml
