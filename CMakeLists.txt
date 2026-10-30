@@ -110,6 +110,7 @@ target_sources(org_kde_desktop PRIVATE ${org_kde_desktop_QM_LOADER})
 ecm_target_qml_sources(org_kde_desktop
     VERSION 1.0
     SOURCES
+        org.kde.desktop/ApplicationWindow.qml
         org.kde.desktop/BusyIndicator.qml
         org.kde.desktop/Button.qml
         org.kde.desktop/CheckBox.qml
