@@ -17,6 +17,13 @@ else()
 target_link_libraries(animationspeedmodifiertest KF6::ConfigCore)
 endif()
 
+ecm_add_test(
+    toolsareatest.cpp
+    LINK_LIBRARIES Qt::Test Qt::Qml Qt::Quick Qt::QuickControls2
+)
+# The plugin just built, not an installed one.
+set_tests_properties(toolsareatest PROPERTIES ENVIRONMENT "CMAKE_BINARY_DIR=${CMAKE_BINARY_DIR};CMAKE_SHARED_LIBRARY_SUFFIX=${CMAKE_SHARED_LIBRARY_SUFFIX};KDECI_BUILD=1;QT_PLUGIN_PATH=${CMAKE_BINARY_DIR}/bin")
+
 if (WIN32)
     return() # Doesn't work in the Windows CI
 endif()
